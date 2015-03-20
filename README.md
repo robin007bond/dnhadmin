@@ -16,6 +16,7 @@ Wordpress should be installed on your (localhost) webserver
 
 ### Installation steps
 The only procedure I wish to document is by downloading the zip. Cloning or other possible ways you can figure out yourself
+
 1. Download the ZIP
 2. Copy the dnhadmin folder into the folder /wp-content/plugins of your Wordpress installation
 3. Import the dnhadmin.sql script into your Wordpress database using PHPMyadmin or your favorite MySQL admin tool
