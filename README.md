@@ -1,5 +1,5 @@
 # DNHAdmin Wordpress Plugin Proof Of Concept
-This PoC demonstrates a possible design pattern for a plgin that can manage a certain MySQL table, with respect to the Wordpress look-and-feel. 
+This PoC demonstrates a possible design pattern for a plugin that can manage a certain MySQL table, with respect to the Wordpress look-and-feel. 
 
 ## Features
 - A Table that lists all rows of a table, using the WP_List_Table class
