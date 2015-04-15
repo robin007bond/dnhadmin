@@ -71,6 +71,81 @@ INSERT INTO `dnh_tarief` (`Jaar`, `Contributie_leden`, `Energietoeslag_leden`, `
 (2014, '100.00', '12.50', '7.50', '0.75'),
 (2015, '100.00', '12.50', '7.50', '0.75');
 
+
+--
+-- Table structure for table `dnh_user`
+--
+
+CREATE TABLE IF NOT EXISTS `dnh_user` (
+  `id` int(11) NOT NULL,
+  `user` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `dnh_user`
+--
+ALTER TABLE `dnh_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `unique_user` (`user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `dnh_user`
+--
+ALTER TABLE `dnh_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Table structure for table `dnh_schip`
+--
+
+CREATE TABLE IF NOT EXISTS `dnh_schip` (
+  `id` int(11) NOT NULL,
+  `schip` varchar(60) NOT NULL,
+  `lid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `dnh_schip`
+--
+ALTER TABLE `dnh_schip`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `unique_schip` (`schip`),
+  ADD UNIQUE KEY `lid_2` (`lid`),
+  ADD KEY `lid` (`lid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `dnh_schip`
+--
+ALTER TABLE `dnh_schip`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `dnh_schip`
+--
+ALTER TABLE `dnh_schip`
+  ADD CONSTRAINT `fk_user` FOREIGN KEY (`lid`) REFERENCES `dnh_user` (`id`);
+
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
